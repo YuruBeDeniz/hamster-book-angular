@@ -1,9 +1,16 @@
 
 <app-header></app-header>
 
-<div class="container">
-    <app-hamster-card  [text]="postTexts[0]" [img]="postImages[0]"></app-hamster-card>
-    <app-hamster-card  [text]="postTexts[1]" [img]="postImages[1]"></app-hamster-card>
-
+<div class="flexrow">
+    <div class="container">
+        <app-friend-box></app-friend-box>
+        <app-hamster-card 
+            *ngFor="let i of [0,1,2,3]" 
+            [text]="postTexts[i]" 
+            [img]="postImages[i]"
+        ></app-hamster-card>
+    </div>
+    <app-proposals></app-proposals>
 </div>
-<button (click)="buttonClicked()">Klicken</button>
+
+
