@@ -1,4 +1,7 @@
 <div class="standard-card padding-16 friendrow">
+    <div *ngIf="fs.names.length === 0">
+        Dus hast keine Freunde
+    </div>
     <div class="friend" *ngFor="let name of fs.names; let i = index">
         <img src="{{ fs.images[i] }}"> {{ name }}
     </div>
