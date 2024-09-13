@@ -1,1 +1,5 @@
-<div class="standard-card padding-16">hey</div>
+<div class="standard-card padding-16 friendrow">
+    <div class="friend" *ngFor="let name of fs.names; let i = index">
+        <img src="{{ fs.images[i] }}"> {{ name }}
+    </div>
+</div>
